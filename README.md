@@ -1,4 +1,5 @@
 AI Security Governance Knowledge Base — 22 Chapters
+
 01-AI-Security-Governance-Foundations
 
 Purpose: Establish the conceptual foundation.
@@ -18,6 +19,7 @@ Three lines of defense for AI
 Board, CISO, CIO, CTO and CRO responsibilities
 AI security governance principles
 AI security governance maturity
+
 02-AI-Technology-and-System-Architecture
 
 Purpose: Give the GRC professional enough technical knowledge to understand what is actually being governed.
@@ -72,6 +74,7 @@ AI governance charter
 AI decision rights
 AI governance metrics
 Board reporting
+
 04-ISO-IEC-42001-AI-Management-System
 
 Purpose: Make ISO/IEC 42001 a core pillar of the knowledge base.
@@ -189,6 +192,7 @@ Key management
 AI workload protection
 Secure AI architecture patterns
 AI security reference architecture
+
 08-AI-Data-Governance-and-Security
 
 Purpose: Govern the data that powers AI.
@@ -218,6 +222,7 @@ Data licensing
 Copyright
 Data access controls
 Data loss prevention
+
 09-Model-Security-and-Machine-Learning-Security
 
 Purpose: Cover security risks at the model level.
@@ -245,6 +250,7 @@ Model versioning
 Model registry
 Model access control
 Secure model deployment
+
 10-Generative-AI-and-LLM-Security
 
 Purpose: Make GenAI security a major specialization.
@@ -332,6 +338,7 @@ Infrastructure-as-code
 Secrets
 DevSecOps integration
 AI change management
+
 13-AI-Testing-Validation-and-Red-Teaming
 
 Purpose: Establish technical assurance.
@@ -389,6 +396,7 @@ Privacy-enhancing technologies
 Differential privacy
 Federated learning
 AI and DPO responsibilities
+
 15-AI-Act-and-Global-AI-Regulation
 
 Purpose: Create your AI regulatory GRC capability.
@@ -452,6 +460,7 @@ SLA
 Right to audit
 Exit strategy
 Vendor concentration risk
+
 17-AI-Incident-Management-and-Resilience
 
 Purpose: Manage AI security incidents and operational failures.
@@ -481,6 +490,7 @@ Disaster recovery
 AI business continuity
 AI crisis management
 Regulatory notification
+
 18-AI-Security-Monitoring-Metrics-and-Assurance
 
 Purpose: Turn AI security governance into measurable governance.
@@ -508,6 +518,7 @@ SOAR
 AI security telemetry
 Executive reporting
 Board reporting
+
 19-AI-Audit-Compliance-and-Assurance
 
 Purpose: Build the AI auditor/GRC professional layer.
@@ -536,6 +547,7 @@ Finding classification
 Corrective actions
 Management review
 AI assurance reports
+
 20-AI-Security-Governance-Tools-and-Templates
 
 Purpose: Turn the knowledge base into a practical consulting toolkit.
