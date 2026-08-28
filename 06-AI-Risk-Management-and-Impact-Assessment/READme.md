@@ -1,13 +1,3 @@
-06 — AI Risk Management and Impact Assessment
-
-Purpose: Develop advanced competence in AI-specific risk assessment.
-
-06.01 — AI Risk Management Foundations
-
-06.02 — AI Risk Taxonomy
-
-06.03 — AI Risk Identification# Chapter 06 — AI Governance, Risk, and Assessment
-
 ## Overview
 
 Chapter 06 provides a structured foundation for understanding and applying **AI Governance and AI Risk Management** from a cybersecurity, GRC, compliance, and enterprise-risk perspective.
