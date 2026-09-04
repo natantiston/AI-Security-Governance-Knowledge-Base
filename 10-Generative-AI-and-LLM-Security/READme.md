@@ -1,4 +1,4 @@
-# Chapter 10 — AI Threats and Attack Techniques
+# Chapter 10-Generative-AI-and-LLM-Security
 
 ## Purpose
 
