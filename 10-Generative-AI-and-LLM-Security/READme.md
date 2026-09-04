@@ -1,126 +1,189 @@
-# Chapter 10-Generative-AI-and-LLM-Security
+# Chapter 10 — Generative AI and LLM Security
 
 ## Purpose
 
-Chapter 10 establishes a structured security and governance knowledge base for understanding, preventing, detecting, responding to, and assuring threats and attack techniques targeting AI systems, particularly LLM-based applications, RAG systems, agents, tools, data pipelines, model infrastructure, and AI supply chains.
+Make **Generative AI and LLM Security** a major cybersecurity specialization by establishing a structured, enterprise-level knowledge base covering the architecture, threats, attack techniques, security controls, governance, risk management, monitoring, incident response, and assurance of Generative AI and Large Language Model (LLM) systems.
 
-The chapter follows an enterprise security perspective rather than treating AI threats as isolated model-behavior problems.
+Chapter 10 progresses from foundational concepts and architecture through specific attack techniques and security domains, concluding with an enterprise GenAI and LLM security framework.
 
-## Core Security Model
+---
 
-The chapter uses the following specialization chain:
+# Chapter 10 Outline
 
-**LLM Threat → Attack Surface → Security Control → Risk → Governance → Evidence → Monitoring → Incident Response**
+| Topic | Title | Primary Focus |
+|---|---|---|
+| **10.01** | Generative AI Security Foundations | Core concepts, architecture, security principles, risks, and enterprise security boundaries |
+| **10.02** | LLM Security Architecture | Security architecture for LLM applications, platforms, data, agents, tools, and infrastructure |
+| **10.03** | Prompt Security | Prompt and context security, integrity, confidentiality, validation, and governance |
+| **10.04** | System Prompts and Prompt Governance | System prompts, behavioral controls, lifecycle, ownership, integrity, and governance |
+| **10.05** | Prompt Injection | Prompt injection concepts, attack surfaces, defenses, governance, and assurance |
+| **10.06** | Direct Prompt Injection | Direct manipulation of model instructions and associated security controls |
+| **10.07** | Indirect Prompt Injection | Malicious instructions delivered through external or retrieved content |
+| **10.08** | Jailbreaking | Techniques for bypassing model safeguards and enterprise defenses |
+| **10.09** | System Prompt Leakage | Disclosure of system instructions and security-sensitive model configuration |
+| **10.10** | Sensitive Information Disclosure | Unauthorized disclosure of sensitive information through AI systems |
+| **10.11** | Hallucination and AI Reliability Risks | Reliability, factuality, uncertainty, decision quality, and security implications |
+| **10.12** | RAG Security | Security of Retrieval-Augmented Generation architectures and knowledge sources |
+| **10.13** | Vector Database Security | Security of vector stores, metadata, access controls, isolation, and retrieval data |
+| **10.14** | Embedding Security | Security risks involving embeddings, representation, integrity, privacy, and access |
+| **10.15** | Retrieval Manipulation | Manipulation of retrieval results, ranking, context, and knowledge selection |
+| **10.16** | Excessive Agency | Excessive AI authority, autonomy, privileges, tools, and operational capability |
+| **10.17** | Insecure Output Handling | Security risks when AI output becomes executable, trusted, or authoritative input |
+| **10.18** | Model Denial of Service and Unbounded Consumption | Availability, resource exhaustion, token abuse, agent loops, and financial consumption |
+| **10.19** | LLM Supply-Chain and Application Security | Models, dependencies, providers, tools, applications, datasets, APIs, and supply-chain risk |
+| **10.20** | Enterprise GenAI and LLM Security Framework | Integrated enterprise architecture, governance, controls, assurance, and operating model |
 
-This means every threat should ultimately be connected to:
+---
 
-- the technical attack surface;
-- preventive and detective controls;
-- enterprise risk;
-- governance ownership;
-- auditable evidence;
-- continuous monitoring;
-- incident response;
-- assurance.
+# Chapter Progression
 
-## Chapter Structure
+Chapter 10 follows a deliberate progression:
 
-Each topic is divided into four parts:
+```text
+Generative AI Security Foundations
+              ↓
+      LLM Security Architecture
+              ↓
+       Prompt & Context Security
+              ↓
+     Prompt-Based Attack Techniques
+              ↓
+      AI Data & Retrieval Security
+              ↓
+       AI Agency & Output Security
+              ↓
+      Availability & Consumption
+              ↓
+    Supply-Chain & Application Security
+              ↓
+ Enterprise GenAI & LLM Framework
+```
 
-### Part 1 — Foundations and Core Concepts
+This structure moves from **understanding the technology** to **understanding the attack surface**, then to **implementing controls**, and finally to **operating and assuring GenAI security at enterprise scale**.
 
-Part 1 establishes the conceptual foundation of the threat.
+---
 
-It covers:
+# Four-Part Structure
+
+Every topic in Chapter 10 is structured into four parts.
+
+## Part 1 — Foundations and Core Concepts
+
+Part 1 establishes the conceptual and security foundation of the topic.
+
+Typical areas include:
 
 - definition;
-- security problem;
-- attack characteristics;
+- threat description;
+- fundamental security problem;
 - attack surface;
 - attack lifecycle;
-- relationships with other AI threats;
+- security boundaries;
+- relationship to other AI threats;
 - confidentiality, integrity, and availability;
-- enterprise risk;
 - Zero Trust;
+- least privilege;
 - defense in depth;
+- enterprise risk;
 - high-impact AI considerations;
 - security objectives;
-- fundamental security principles.
+- fundamental security principle.
 
-### Part 2 — Technical Security and Control Mechanisms
+## Part 2 — Technical Security and Control Mechanisms
 
-Part 2 translates the threat into technical controls.
+Part 2 translates the threat into implementable technical controls.
 
-It covers areas such as:
+Typical areas include:
 
 - identity;
+- authentication;
 - authorization;
 - least privilege;
-- input and output controls;
 - data security;
+- context security;
+- RAG controls;
+- model controls;
 - tool and agent controls;
 - network security;
-- isolation;
+- egress controls;
 - resource controls;
+- input validation;
+- output validation;
+- isolation;
 - monitoring;
 - detection;
 - logging;
 - containment;
 - rollback;
-- emergency controls;
-- independent enforcement.
+- emergency controls.
 
-### Part 3 — Governance, Risk, GRC, and Operational Controls
+The recurring engineering principle is:
 
-Part 3 converts the technical threat into an enterprise governance capability.
+> **Never rely on the AI model alone to enforce a security property that can be independently enforced outside the model.**
 
-It covers:
+## Part 3 — Governance, Risk, GRC, and Operational Controls
+
+Part 3 connects technical security to enterprise governance.
+
+Typical areas include:
 
 - ownership and accountability;
 - risk classification;
 - AI application tiering;
 - risk registers;
-- risk appetite;
+- risk appetite and tolerance;
 - data governance;
 - model governance;
+- RAG governance;
 - tool and agent governance;
-- third-party and supply-chain governance;
+- third-party governance;
 - security requirements;
 - threat modeling;
 - secure SDLC;
 - change management;
-- testing;
-- monitoring;
-- incident response;
+- adversarial testing;
+- control effectiveness;
+- security monitoring;
+- incident classification;
 - SOC integration;
 - evidence and auditability;
 - GRC integration;
 - risk-to-control traceability;
 - continuous control monitoring;
+- exceptions;
+- risk acceptance;
 - independent assurance;
 - maturity.
 
-### Part 4 — Advanced Enterprise Application, Assurance, and Operationalization
+The recurring governance principle is:
 
-Part 4 extends the threat into an enterprise-scale operating model.
+> **AI security must be governed as an enterprise security capability with explicit ownership, risk classification, controlled change, measurable controls, evidence, monitoring, and independent assurance.**
 
-It covers:
+## Part 4 — Advanced Enterprise Application, Assurance, and Operationalization
+
+Part 4 develops the topic into an enterprise-scale security operating model.
+
+Typical areas include:
 
 - enterprise security architecture;
 - AI security gateways;
 - policy-as-code;
 - Zero Trust;
 - dynamic authorization;
-- fine-grained controls;
+- fine-grained authorization;
+- secure AI control planes;
 - agentic AI security;
 - security observability;
 - SOC integration;
 - incident response;
 - kill switches;
 - blast-radius reduction;
+- human approval;
+- dual authorization;
 - cryptographic integrity;
 - supply-chain assurance;
-- continuous and adversarial testing;
+- continuous security testing;
+- behavioral monitoring;
 - security dashboards;
 - risk-based assurance;
 - continuous control monitoring;
@@ -128,242 +191,125 @@ It covers:
 - risk quantification;
 - assurance packages;
 - lifecycle governance;
-- enterprise integration;
-- strategic security principles.
+- enterprise security integration.
+
+The recurring enterprise principle is:
+
+> **AI security controls must remain independently enforceable, continuously monitored, risk-based, auditable, and recoverable throughout the AI lifecycle.**
 
 ---
 
-# Topics Covered
-
-## 10.01 — [Chapter Topic]
-
-Foundational AI security threat topic.
-
-## 10.02 — [Chapter Topic]
-
-AI security threat and attack technique topic.
-
-## 10.03 — Prompt Security
-
-Prompt security treats prompts and model context as security-sensitive control surfaces.
-
-Key principle:
-
-> Treat prompts and model context as security-sensitive control surfaces, not merely text.
-
-## 10.04 — System Prompts and Prompt Governance
-
-System prompts are treated as managed enterprise artifacts rather than informal configuration.
-
-Key principle:
-
-> System prompts are behavioral controls, not substitutes for deterministic security enforcement.
-
-## 10.05 — Prompt Injection
-
-Prompt injection is treated as an instruction-integrity threat involving malicious or untrusted instructions entering AI context.
-
-Key principle:
-
-> Externally supplied instructions and retrieved content must be treated as potentially untrusted.
-
-## 10.06 — Direct Prompt Injection
-
-Direct prompt injection focuses on attacks in which an attacker directly manipulates the model's instruction context.
-
-Key principle:
-
-> Prompt behavior must never be confused with enterprise security authorization.
-
-## 10.07 — Indirect Prompt Injection
-
-Indirect prompt injection focuses on malicious instructions embedded in externally sourced or retrieved content.
-
-Key principle:
-
-> Externally sourced content must be treated as potentially hostile data even when it originates from a legitimate business system.
-
-## 10.08 — Jailbreaking
-
-Jailbreaking focuses on techniques intended to bypass model safeguards or behavioral restrictions.
-
-Key principle:
-
-> A successful jailbreak should remain a model-security failure and must not automatically become an authorization failure.
-
-## 10.09 — System Prompt Leakage
-
-System prompt leakage addresses disclosure of system instructions, hidden behavioral configuration, and related information.
-
-Key principle:
-
-> System prompts should be treated as security-sensitive configuration, not secret storage or primary authorization mechanisms.
-
-## 10.10 — Sensitive Information Disclosure
-
-Sensitive information disclosure addresses unauthorized exposure of sensitive data through AI systems.
-
-Key principle:
-
-> Sensitive information should be authorized before entering AI context and validated again before leaving the AI system.
-
-## 10.11 — Data Poisoning
-
-Data poisoning addresses malicious or compromised data influencing training, fine-tuning, RAG, evaluation, feedback, embeddings, or AI behavior.
-
-Key principle:
-
-> Protect the integrity and trustworthiness of AI data before it enters learning or inference.
-
-## 10.12 — Model Inversion Attacks
-
-Model inversion addresses inference of sensitive information from model behavior or outputs.
-
-Key principle:
-
-> A model trained on sensitive information can become an inference surface rather than a trusted confidentiality boundary.
-
-## 10.13 — Membership Inference Attacks
-
-Membership inference addresses attempts to determine whether particular information was included in model training data.
-
-Key principle:
-
-> Model interfaces can become privacy inference channels.
-
-## 10.14 — Data Extraction Attacks
-
-Data extraction addresses unauthorized retrieval of information through AI-mediated access.
-
-Key principle:
-
-> AI-mediated access must never create a path around established enterprise authorization boundaries.
-
-## 10.15 — Data Exfiltration Through AI Systems
-
-This topic addresses the use of AI systems as channels for unauthorized data transfer.
-
-Key principle:
-
-> Sensitive information must not cross an AI system's security boundary unless the data, destination, identity, purpose, and transfer mechanism are independently authorized.
-
-## 10.16 — Excessive Agency
-
-Excessive agency addresses AI systems possessing more authority, autonomy, access, or operational capability than required.
-
-Key principle:
-
-> AI autonomy must never exceed the authority necessary to perform its approved business purpose.
-
-## 10.17 — Improper Output Handling
-
-Improper output handling addresses risks created when AI-generated output is treated as trusted, executable, or authoritative input.
-
-Key principle:
-
-> AI-generated output must never acquire trusted, executable, or authoritative status merely because it originated from an approved AI system.
-
-## 10.18 — Model Denial of Service and Unbounded Consumption
-
-This topic addresses uncontrolled computational, operational, and financial resource consumption.
-
-Key principle:
-
-> No AI user, application, model, or agent should be capable of consuming unlimited enterprise or third-party resources merely because the underlying AI capability technically permits it.
-
-## 10.19 — LLM Supply-Chain and Application Security
-
-This topic addresses security risks across models, datasets, dependencies, frameworks, APIs, plugins, tools, agents, providers, and AI applications.
-
-Key principle:
-
-> Every AI model, dataset, dependency, framework, plugin, tool, provider, API, and application component must remain identifiable, authorized, integrity-protected, risk-assessed, monitored, and replaceable throughout its lifecycle.
-
-## 10.20 — Insecure AI Model Configuration
-
-This topic addresses security weaknesses caused by insecure model, application, agent, infrastructure, data, network, provider, or operational configuration.
-
-Key principle:
-
-> AI model configuration must be treated as a security-critical control surface rather than a collection of technical settings.
+# Core Chapter Security Model
+
+Chapter 10 uses the following specialization chain:
+
+```text
+LLM Threat
+    ↓
+Attack Surface
+    ↓
+Security Control
+    ↓
+Enterprise Risk
+    ↓
+Governance
+    ↓
+Evidence
+    ↓
+Monitoring
+    ↓
+Incident Response
+    ↓
+Assurance
+```
+
+Every major threat should therefore be translated into an enterprise security capability rather than being treated solely as a model-behavior issue.
 
 ---
 
-# Cross-Chapter Security Principles
+# Core Security Principles
 
-## 1. Model Behavior Is Not Authorization
+## 1. Model Behavior Is Not Security Authorization
 
-A recurring principle throughout Chapter 10 is:
+A foundational Chapter 10 principle is:
 
 **Model Behavior ≠ Security Authorization**
 
-The model should never be the sole authority determining whether a user may:
+The model should not independently determine whether a user or agent is authorized to:
 
-- access data;
-- invoke a tool;
+- access sensitive data;
+- invoke a privileged tool;
 - execute code;
-- perform a transaction;
-- communicate externally;
 - modify infrastructure;
-- consume resources.
+- perform a financial transaction;
+- communicate externally;
+- consume protected resources.
 
 Authorization should be independently enforced.
 
-## 2. Prompt Instructions Are Not Security Controls
+## 2. AI Output Is Not Automatically Trusted
 
-Instructions can influence model behavior, but they should not be treated as deterministic authorization, DLP, network, identity, or privilege controls.
+AI-generated content should not automatically become:
 
-## 3. AI Is Part of a Larger Security Boundary
+- executable code;
+- SQL;
+- shell commands;
+- API parameters;
+- infrastructure changes;
+- business transactions;
+- security decisions;
+- authoritative records.
 
-The effective AI security boundary includes:
+AI output requires appropriate validation, authorization, and downstream controls.
 
-- models;
-- prompts;
-- context;
-- RAG;
-- memory;
-- data;
-- agents;
-- tools;
+## 3. External Content Is Not Automatically Trusted
+
+Content from:
+
+- websites;
+- email;
+- documents;
+- databases;
+- knowledge bases;
+- RAG sources;
 - APIs;
-- applications;
-- infrastructure;
-- networks;
-- providers;
-- dependencies.
+- collaboration systems
+
+must not become trusted instructions merely because it came from a legitimate system.
 
 ## 4. Least Privilege
 
-AI systems should receive only the:
+AI systems should receive only the authority required for the approved business purpose.
+
+This applies to:
 
 - data;
 - tools;
-- permissions;
-- network access;
+- APIs;
 - credentials;
+- network access;
 - compute;
-- autonomy
-
-required for the approved business purpose.
+- autonomy;
+- transactions.
 
 ## 5. Zero Trust
 
-AI components should not receive permanent trust simply because they are:
+AI components should not receive implicit trust because they are:
 
-- inside the enterprise;
-- previously approved;
-- from a known provider;
-- open source;
+- internal;
+- approved;
 - authentic;
-- technically valid.
+- open source;
+- supplied by a recognized provider;
+- previously validated.
 
-Trust should be continuously evaluated.
+Trust should be evaluated continuously.
 
 ## 6. Defense in Depth
 
-No single AI security mechanism should be expected to prevent all attacks.
+No individual AI security mechanism should be considered sufficient.
 
-A mature architecture uses multiple independent layers:
+A mature architecture combines:
 
 ```text
 Identity
@@ -376,11 +322,13 @@ Prompt / Context Security
    ↓
 Model Security
    ↓
+RAG Security
+   ↓
 Tool / Agent Security
    ↓
-Network Security
-   ↓
 Output Security
+   ↓
+Network / Egress Security
    ↓
 Resource Security
    ↓
@@ -389,108 +337,93 @@ Monitoring
 Detection
    ↓
 Incident Response
+   ↓
+Assurance
 ```
 
 ## 7. Blast-Radius Reduction
 
-The organization should assume that individual AI components can eventually fail or become compromised.
+Chapter 10 assumes that individual AI components can eventually fail or become compromised.
 
-The objective is to ensure that:
+The objective is:
 
 **Component Compromise ≠ Enterprise Compromise**
 
-Compromise should remain bounded by:
+Controls should limit the impact through:
 
 - privilege segmentation;
 - tenant isolation;
+- session isolation;
 - network segmentation;
 - data authorization;
 - tool authorization;
 - resource limits;
 - egress controls;
+- human approval;
 - monitoring;
-- emergency response.
-
-## 8. Continuous Assurance
-
-AI security cannot rely solely on point-in-time certification.
-
-The security posture must account for:
-
-- model changes;
-- configuration changes;
-- provider changes;
-- dependency changes;
-- data changes;
-- RAG changes;
-- tool changes;
-- behavioral drift;
-- new vulnerabilities.
+- emergency intervention.
 
 ---
 
-# Common Enterprise AI Security Architecture
+# Enterprise AI Security Boundary
 
-The chapter consistently builds toward an architecture similar to:
+The effective security boundary for an enterprise GenAI system includes more than the model.
 
 ```text
-                    Enterprise AI Security
-                             |
-       +---------------------+---------------------+
-       |                     |                     |
-     Identity              Data                AI Platform
-       |                     |                     |
-   Authentication      Classification        Model Security
-   Authorization       Authorization          Configuration
-   PAM                 DLP                   Prompt Security
-                       RAG                   Agent Security
-                                             Tool Security
-       |                     |                     |
-       +---------------------+---------------------+
-                             |
-                      AI Security Gateway
-                             |
-                 +-----------+-----------+
-                 |           |           |
-              Model        Agent        RAG
-                 |           |           |
-                 +-----------+-----------+
-                             |
-                      Enterprise Systems
-                             |
-                 +-----------+-----------+
-                 |           |           |
-               APIs        Tools       Data
-                 |
-          Network / Egress Controls
-                 |
-          Monitoring / Detection
-                 |
-              SIEM / SOC
-                 |
-        Incident Response / SOAR
-                 |
-              GRC / Risk
-                 |
-        Independent Assurance
+                 Enterprise AI Security Boundary
+                              |
+       +----------------------+----------------------+
+       |                      |                      |
+     Identity               Data                  AI Layer
+       |                      |                      |
+ Authentication        Classification          Model
+ Authorization         Authorization            Prompt
+ PAM                    DLP                     Context
+ Service Identity       RAG                     Memory
+                        Vector DB                Agent
+                                                Tools
+       |                      |                      |
+       +----------------------+----------------------+
+                              |
+                         AI Application
+                              |
+                   +----------+----------+
+                   |                     |
+                  APIs                 Network
+                   |                     |
+                   +----------+----------+
+                              |
+                     Enterprise Systems
+                              |
+                    Monitoring / Detection
+                              |
+                         SOC / SIEM
+                              |
+                       Incident Response
+                              |
+                           GRC / Risk
+                              |
+                         Assurance
 ```
 
 ---
 
 # Enterprise AI Security Lifecycle
 
-Chapter 10 applies security throughout the AI lifecycle:
+Chapter 10 applies security controls throughout the complete AI lifecycle:
 
 ```text
 Identify
+   ↓
+Inventory
    ↓
 Classify
    ↓
 Threat Model
    ↓
-Define Requirements
+Define Security Requirements
    ↓
-Design Controls
+Design
    ↓
 Build
    ↓
@@ -506,6 +439,8 @@ Detect
    ↓
 Respond
    ↓
+Recover
+   ↓
 Assure
    ↓
 Improve
@@ -513,16 +448,18 @@ Improve
 Retire
 ```
 
-Security controls should remain active throughout the entire lifecycle.
+Security is therefore treated as a lifecycle capability rather than a one-time implementation activity.
 
 ---
 
-# AI Threat-to-Control Model
+# Threat-to-Control Traceability
 
-A threat should be translated into an enterprise control chain:
+Each topic should establish a clear relationship between threat and control:
 
 ```text
 Threat
+  ↓
+Attack Technique
   ↓
 Attack Surface
   ↓
@@ -536,79 +473,23 @@ Response Control
   ↓
 Evidence
   ↓
-Risk Assessment
+Risk
   ↓
 Assurance
 ```
 
-This provides traceability from technical threats to enterprise governance.
-
----
-
-# AI Security Evidence Model
-
-Evidence should demonstrate not only that a control exists, but that it operates effectively.
-
-Examples include:
-
-- configuration baselines;
-- model inventories;
-- AI BOMs;
-- SBOMs;
-- access-control records;
-- authorization decisions;
-- security-test results;
-- adversarial testing;
-- monitoring records;
-- configuration-drift reports;
-- vulnerability findings;
-- incident records;
-- exception records;
-- risk acceptance;
-- assurance reports.
-
----
-
-# AI Security Monitoring Model
-
-Monitoring should correlate:
-
-```text
-Identity
- ↓
-AI Application
- ↓
-Model
- ↓
-Configuration
- ↓
-Prompt / Context
- ↓
-Data
- ↓
-Agent
- ↓
-Tool
- ↓
-API
- ↓
-Network
- ↓
-Action
-```
-
-This enables the SOC and security teams to understand not only what happened, but how an AI threat moved through the environment.
+This structure supports enterprise GRC, auditability, and security assurance.
 
 ---
 
 # GRC Integration Model
 
-Chapter 10 connects AI security engineering to enterprise GRC:
+Chapter 10 connects AI security engineering to enterprise risk management:
 
 ```text
 AI Threat
    ↓
-Risk
+Risk Scenario
    ↓
 Risk Owner
    ↓
@@ -620,62 +501,178 @@ Control Owner
    ↓
 Evidence
    ↓
-Control Test
+Control Testing
    ↓
 Monitoring
    ↓
 Residual Risk
    ↓
-Assurance
+Risk Acceptance / Treatment
+   ↓
+Independent Assurance
 ```
 
-This provides a defensible relationship between AI threats and enterprise risk management.
+---
+
+# AI Security Monitoring Model
+
+Monitoring should correlate activity across the AI ecosystem:
+
+```text
+Identity
+   ↓
+User / Service / Agent
+   ↓
+AI Application
+   ↓
+Model / Model Version
+   ↓
+Configuration
+   ↓
+Prompt / Context
+   ↓
+RAG / Vector / Embeddings
+   ↓
+Data
+   ↓
+Tool / API
+   ↓
+Action
+   ↓
+Network / Egress
+   ↓
+External System
+```
+
+This enables security operations to reconstruct the complete attack path rather than examining isolated model events.
+
+---
+
+# Evidence and Assurance
+
+Chapter 10 treats security evidence as a first-class enterprise requirement.
+
+Relevant evidence can include:
+
+- AI asset inventories;
+- model inventories;
+- model/version records;
+- AI BOMs and SBOMs;
+- prompt and configuration baselines;
+- access-control records;
+- authorization decisions;
+- RAG source inventories;
+- vector database access records;
+- embedding integrity records;
+- security testing results;
+- adversarial testing;
+- configuration-drift reports;
+- monitoring records;
+- vulnerability findings;
+- incident records;
+- exception records;
+- risk acceptance;
+- control effectiveness tests;
+- assurance reports.
+
+Evidence should demonstrate both **control existence** and **control effectiveness**.
 
 ---
 
 # Maturity Model
 
-A general Chapter 10 maturity model can be applied across individual AI threats.
+The Chapter 10 maturity model progresses from reactive security to continuously assured AI security.
 
 | Level | Capability |
 |---|---|
-| 1 — Initial | Reactive controls, limited visibility |
-| 2 — Managed | Basic policies, ownership, and controls |
-| 3 — Defined | Standardized architecture, governance, testing |
-| 4 — Automated | Policy-as-code, continuous monitoring, automated detection |
-| 5 — Adaptive | Continuous assurance, risk-based enforcement, automated response |
-
-Organizations should progress from individual technical controls toward integrated, continuously assured AI security.
+| **1 — Initial** | Reactive controls, limited visibility, inconsistent ownership |
+| **2 — Managed** | Basic policies, ownership, inventories, and security controls |
+| **3 — Defined** | Standardized architecture, governance, testing, and operating procedures |
+| **4 — Automated** | Policy-as-code, automated validation, continuous monitoring, and automated detection |
+| **5 — Adaptive** | Risk-based enforcement, continuous assurance, behavioral analytics, automated response, and adaptive controls |
 
 ---
 
-# Core Chapter Principle
+# Strategic Relationship Between Topics
 
-The central principle of Chapter 10 is:
-
-> **AI security threats must be treated as enterprise security risks rather than isolated model-behavior problems. Every AI threat should be mapped to its attack surface, independently enforced controls, risk ownership, governance requirements, monitoring, evidence, incident response, and assurance mechanisms.**
-
-The ultimate security objective is:
+The chapter topics form an interconnected security model.
 
 ```text
-AI Threat
-   ↓
-Contained at AI Boundary
-   ↓
-Independent Security Controls
-   ↓
-Detection
-   ↓
-Controlled Response
-   ↓
-Evidence
-   ↓
-Risk Management
-   ↓
-Continuous Assurance
+10.01 Foundations
+       ↓
+10.02 Architecture
+       ↓
+10.03 Prompt Security
+       ↓
+10.04 System Prompts
+       ↓
+10.05 Prompt Injection
+       ├── 10.06 Direct Prompt Injection
+       ├── 10.07 Indirect Prompt Injection
+       └── 10.08 Jailbreaking
+               ↓
+10.09 System Prompt Leakage
+               ↓
+10.10 Sensitive Information Disclosure
+               ↓
+10.11 Hallucination / Reliability
+               ↓
+10.12 RAG Security
+       ↓
+10.13 Vector Database Security
+       ↓
+10.14 Embedding Security
+       ↓
+10.15 Retrieval Manipulation
+               ↓
+10.16 Excessive Agency
+               ↓
+10.17 Insecure Output Handling
+               ↓
+10.18 Model DoS / Unbounded Consumption
+               ↓
+10.19 LLM Supply-Chain & Application Security
+               ↓
+10.20 Enterprise GenAI & LLM Security Framework
 ```
 
-A successful prompt injection, jailbreak, data-poisoning event, compromised dependency, insecure configuration, model failure, excessive agency condition, data-exfiltration attempt, or resource-abuse event should **not automatically become an enterprise compromise**.
+The progression intentionally moves from **technology foundations → architecture → attacks → data/retrieval → autonomy/output → availability → supply chain → enterprise security framework**.
+
+---
+
+# Chapter 10 Strategic Principle
+
+> **Generative AI and LLM security must be treated as an enterprise cybersecurity discipline in which models, prompts, context, data, RAG systems, vector databases, embeddings, agents, tools, applications, infrastructure, providers, and supply-chain components are governed as interconnected security assets. Every significant AI threat must be addressed through independently enforceable controls, risk-based governance, continuous monitoring, incident response, evidence, and assurance.**
+
+The ultimate objective is:
+
+```text
+AI Capability
+     ↓
+Identify Attack Surface
+     ↓
+Assess Risk
+     ↓
+Apply Independent Controls
+     ↓
+Authorize
+     ↓
+Monitor
+     ↓
+Detect
+     ↓
+Contain
+     ↓
+Recover
+     ↓
+Preserve Evidence
+     ↓
+Assure
+     ↓
+Improve
+```
+
+A successful jailbreak, prompt injection, retrieval manipulation, sensitive-data disclosure, excessive-agency event, insecure output condition, availability attack, or supply-chain compromise should **not automatically become an enterprise compromise**.
 
 The mature enterprise objective is:
 
