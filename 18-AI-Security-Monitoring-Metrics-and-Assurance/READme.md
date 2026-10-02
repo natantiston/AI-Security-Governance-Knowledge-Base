@@ -1362,3 +1362,1155 @@ Chapter 18 therefore provides the measurement and assurance foundation required 
 **Numbering model:** `1–400 per topic`
 
 **Primary objective:** Transform AI security governance into a measurable, continuously monitored, analytically informed, evidence-supported, and appropriately assured enterprise capability.
+
+# Practical AI Security Metric Examples
+
+The following examples illustrate how the concepts in Chapter 18 can be translated into operational measurements.
+
+These are **illustrative governance metrics**, not universal mandatory metrics. Organizations should define applicability, populations, thresholds, targets, ownership, and methodology according to their AI environment and risk profile.
+
+---
+
+## 1. AI Inventory Coverage
+
+Measures the proportion of known AI systems represented in the organization's approved AI inventory.
+
+**Formula:**
+
+```text
+AI Inventory Coverage =
+AI Systems Recorded in Approved Inventory
+----------------------------------------- × 100
+Identified AI Systems
+```
+
+**Example:**
+
+* 95 AI systems identified
+* 90 recorded in the approved inventory
+
+Result:
+
+**94.7% inventory coverage**
+
+**Interpretation:**
+
+A lower percentage indicates potential visibility gaps.
+
+**Important distinction:**
+
+**Inventory Coverage ≠ Complete AI Visibility.**
+
+---
+
+## 2. Critical AI Security Assessment Coverage
+
+Measures whether critical AI systems have undergone the required security assessment.
+
+```text
+Critical AI Assessment Coverage =
+Critical AI Systems with Current Security Assessment
+---------------------------------------------------- × 100
+Applicable Critical AI Systems
+```
+
+Example:
+
+* 40 applicable critical AI systems
+* 36 have current assessments
+
+Result:
+
+**90%**
+
+---
+
+## 3. AI Security Control Effectiveness
+
+Measures the proportion of tested controls that operated effectively during the assessment period.
+
+```text
+Control Effectiveness Rate =
+Controls Tested and Effective
+----------------------------- × 100
+Controls Tested
+```
+
+Example:
+
+* 120 controls tested
+* 108 assessed as effective
+
+Result:
+
+**90%**
+
+**Important distinction:**
+
+**Control Effectiveness Rate ≠ Overall AI Security Effectiveness.**
+
+---
+
+## 4. AI Security Monitoring Coverage
+
+Measures whether applicable AI systems have required security monitoring.
+
+```text
+AI Monitoring Coverage =
+AI Systems with Required Monitoring
+------------------------------------ × 100
+Applicable AI Systems
+```
+
+Example:
+
+* 200 applicable AI systems
+* 184 have required monitoring
+
+Result:
+
+**92%**
+
+---
+
+## 5. Critical AI Monitoring Coverage
+
+A risk-weighted version of monitoring coverage.
+
+```text
+Critical AI Monitoring Coverage =
+Critical AI Systems with Required Monitoring
+--------------------------------------------- × 100
+Applicable Critical AI Systems
+```
+
+This can be more useful for governance than treating every AI system as equally important.
+
+---
+
+## 6. AI Security KPI Achievement
+
+Measures achievement against a defined KPI target.
+
+Example:
+
+**Target:** 95% of critical AI systems assessed within required timeframe.
+
+**Actual:** 91%.
+
+```text
+Variance = Actual - Target
+         = 91% - 95%
+         = -4 percentage points
+```
+
+The variance should be interpreted in context.
+
+**Target Achievement ≠ Risk Elimination.**
+
+---
+
+## 7. Critical AI Security KRI
+
+Measures the percentage of critical AI systems with unresolved material security exposure.
+
+```text
+Critical AI Exposure KRI =
+Critical AI Systems with Material Unresolved Exposure
+------------------------------------------------------ × 100
+Applicable Critical AI Systems
+```
+
+Example:
+
+* 50 critical AI systems
+* 7 have material unresolved exposure
+
+Result:
+
+**14%**
+
+The organization can establish internal early-warning and escalation thresholds.
+
+---
+
+## 8. AI Security Risk Appetite Breach Rate
+
+Measures the proportion of material AI security risks exceeding approved risk appetite.
+
+```text
+Risk Appetite Breach Rate =
+Material AI Risks Above Appetite
+-------------------------------- × 100
+Material AI Risks Assessed
+```
+
+Example:
+
+* 30 material AI risks
+* 4 exceed approved appetite
+
+Result:
+
+**13.3%**
+
+---
+
+## 9. Critical AI Incident Rate
+
+Measures critical AI incidents over a defined period.
+
+```text
+Critical AI Incident Rate =
+Critical AI Incidents
+----------------------
+Reporting Period
+```
+
+Example:
+
+* 3 critical incidents
+* Quarterly reporting period
+
+Result:
+
+**3 critical incidents per quarter**
+
+Incident counts should be interpreted alongside detection capability and AI usage volume.
+
+---
+
+## 10. AI Incident Detection Time
+
+Measures the elapsed time between occurrence or observable manifestation of an incident and its detection.
+
+```text
+Detection Time =
+Detection Timestamp - Incident Start / Observable Event Timestamp
+```
+
+Example:
+
+* Incident began: 10:05
+* Detected: 10:17
+
+Result:
+
+**12 minutes**
+
+---
+
+## 11. AI Incident Response Time
+
+Measures the elapsed time between detection and initiation of an appropriate response.
+
+```text
+Response Time =
+Response Initiation Timestamp - Detection Timestamp
+```
+
+Example:
+
+* Detected: 10:17
+* Response initiated: 10:24
+
+Result:
+
+**7 minutes**
+
+**Detection Time ≠ Response Time.**
+
+---
+
+## 12. AI Incident Recovery Time
+
+Measures the time required to restore the affected service or capability to an approved recovery state.
+
+```text
+Recovery Time =
+Trusted Recovery Timestamp - Incident Start / Recovery Trigger
+```
+
+Recovery criteria should be explicitly defined.
+
+**Technical Restoration ≠ Trusted Recovery Automatically.**
+
+---
+
+## 13. AI Incident Recurrence Rate
+
+Measures repeated incidents within a defined population and period.
+
+```text
+Incident Recurrence Rate =
+Recurring AI Incidents
+---------------------- × 100
+Total AI Incidents
+```
+
+Example:
+
+* 20 AI incidents
+* 5 represent recurrence of previously observed conditions
+
+Result:
+
+**25%**
+
+**Recurrence ≠ Root Cause.**
+
+---
+
+## 14. AI Remediation Completion Rate
+
+Measures completed remediation actions.
+
+```text
+Remediation Completion Rate =
+Completed Remediation Actions
+----------------------------- × 100
+Due Remediation Actions
+```
+
+Example:
+
+* 100 remediation actions due
+* 87 completed
+
+Result:
+
+**87%**
+
+**Remediation Completion ≠ Remediation Effectiveness.**
+
+---
+
+## 15. Overdue AI Security Remediation Rate
+
+```text
+Overdue Remediation Rate =
+Overdue AI Remediation Actions
+------------------------------ × 100
+Open AI Remediation Actions
+```
+
+Example:
+
+* 80 open actions
+* 12 overdue
+
+Result:
+
+**15%**
+
+---
+
+## 16. Mean Time to Remediate AI Security Findings
+
+```text
+MTTR =
+Sum of Remediation Duration
+---------------------------
+Number of Remediated Findings
+```
+
+Example:
+
+Five findings required:
+
+* 10 days
+* 15 days
+* 20 days
+* 25 days
+* 30 days
+
+Average:
+
+**20 days**
+
+The metric should be segmented by severity because an enterprise-wide average can conceal critical delays.
+
+---
+
+## 17. Model Performance Degradation
+
+Measures change in model performance relative to an approved baseline.
+
+```text
+Performance Degradation =
+Baseline Performance - Current Performance
+```
+
+Example:
+
+* Baseline accuracy: 96%
+* Current accuracy: 92%
+
+Result:
+
+**4 percentage-point degradation**
+
+The organization should investigate whether the change is statistically and practically significant.
+
+---
+
+## 18. Model Drift Rate
+
+Measures the proportion of monitored models exhibiting material drift.
+
+```text
+Material Model Drift Rate =
+Models with Material Drift
+-------------------------- × 100
+Models Monitored
+```
+
+Example:
+
+* 150 models monitored
+* 12 exceed the organization's defined material-drift threshold
+
+Result:
+
+**8%**
+
+**Drift ≠ Model Failure Automatically.**
+
+---
+
+## 19. Feature Drift
+
+A distribution-based metric can be used to compare a current population with an approved reference population.
+
+For example, Population Stability Index (PSI):
+
+```text
+PSI = Σ (Actualᵢ - Expectedᵢ)
+          × ln(Actualᵢ / Expectedᵢ)
+```
+
+Example interpretation should be based on the organization's methodology, model sensitivity, population size, and business context rather than relying on a universal threshold.
+
+---
+
+## 20. AI Hallucination Rate
+
+Measures the proportion of evaluated outputs containing a defined hallucination condition.
+
+```text
+Hallucination Rate =
+Outputs Classified as Hallucinated
+---------------------------------- × 100
+Outputs Evaluated
+```
+
+Example:
+
+* 2,000 outputs evaluated
+* 36 classified as hallucinated
+
+Result:
+
+**1.8%**
+
+The evaluation methodology should define what constitutes a hallucination.
+
+---
+
+## 21. AI Reliability Rate
+
+```text
+AI Reliability Rate =
+Outputs Meeting Defined Reliability Criteria
+-------------------------------------------- × 100
+Outputs Evaluated
+```
+
+Example:
+
+* 5,000 outputs evaluated
+* 4,850 met defined reliability criteria
+
+Result:
+
+**97%**
+
+**Reliability Rate ≠ Complete AI Safety or Security Assurance.**
+
+---
+
+## 22. AI Fairness Metric
+
+A fairness analysis may compare outcome rates across defined populations.
+
+For example:
+
+```text
+Selection Rate =
+Positive Outcomes
+----------------- × 100
+Eligible Population
+```
+
+Selection rates can then be compared across appropriately defined groups.
+
+The metric must be interpreted according to:
+
+* Population definition
+* Context
+* Model purpose
+* Applicable fairness methodology
+* Statistical uncertainty
+* Data quality
+
+**Fairness Metric ≠ Complete Fairness Assessment.**
+
+---
+
+## 23. AI Policy Compliance Rate
+
+```text
+Policy Compliance Rate =
+Compliant Applicable Population
+------------------------------ × 100
+Applicable Population
+```
+
+Example:
+
+* 500 applicable AI systems
+* 465 satisfy the defined policy criteria
+
+Result:
+
+**93%**
+
+---
+
+## 24. AI Policy Exception Rate
+
+```text
+Policy Exception Rate =
+AI Systems with Approved/Open Policy Exceptions
+----------------------------------------------- × 100
+Applicable AI Systems
+```
+
+This can help identify where policy implementation diverges from the intended operating model.
+
+---
+
+## 25. AI Policy Overdue Exception Rate
+
+```text
+Overdue Exception Rate =
+Overdue Policy Exceptions
+------------------------- × 100
+Open Policy Exceptions
+```
+
+Example:
+
+* 40 open exceptions
+* 6 overdue
+
+Result:
+
+**15%**
+
+---
+
+## 26. AI Governance Training Completion
+
+```text
+AI Governance Training Completion =
+Required Personnel Completing Training
+-------------------------------------- × 100
+Personnel Required to Complete Training
+```
+
+Example:
+
+* 1,000 personnel required
+* 940 completed
+
+Result:
+
+**94%**
+
+**Training Completion ≠ Competence.**
+
+---
+
+## 27. AI Security Assessment Completion
+
+```text
+Assessment Completion =
+Completed Required Assessments
+------------------------------ × 100
+Required Assessments
+```
+
+Example:
+
+* 250 assessments required
+* 235 completed
+
+Result:
+
+**94%**
+
+The metric does not establish that the completed assessments were satisfactory.
+
+---
+
+## 28. AI Security Evidence Completeness
+
+```text
+Evidence Completeness =
+Required Evidence Items Available
+---------------------------------- × 100
+Required Evidence Items
+```
+
+Example:
+
+* 1,000 required evidence items
+* 930 available
+
+Result:
+
+**93%**
+
+**Evidence Availability ≠ Evidence Sufficiency.**
+
+---
+
+## 29. AI Security Evidence Validation Rate
+
+```text
+Evidence Validation Rate =
+Evidence Items Successfully Validated
+-------------------------------------- × 100
+Evidence Items Selected for Validation
+```
+
+This measures the proportion of evidence items that successfully pass the organization's validation criteria.
+
+---
+
+## 30. AI Security Data Quality Rate
+
+A composite data-quality metric can combine dimensions such as:
+
+* Completeness
+* Accuracy
+* Timeliness
+* Consistency
+* Integrity
+
+Example:
+
+```text
+Data Quality Score =
+Weighted Completeness
++ Weighted Accuracy
++ Weighted Timeliness
++ Weighted Consistency
++ Weighted Integrity
+```
+
+Weights should be explicitly documented.
+
+**Composite Score ≠ Complete Data Quality Assurance.**
+
+---
+
+## 31. AI Security Telemetry Coverage
+
+```text
+Telemetry Coverage =
+AI Assets Producing Required Telemetry
+--------------------------------------- × 100
+AI Assets Requiring Telemetry
+```
+
+Example:
+
+* 500 AI assets require telemetry
+* 460 produce required telemetry
+
+Result:
+
+**92%**
+
+**Telemetry Coverage ≠ Security Effectiveness.**
+
+---
+
+## 32. AI Security Alert-to-Incident Conversion Rate
+
+Measures the proportion of security alerts that become confirmed incidents.
+
+```text
+Alert-to-Incident Rate =
+Confirmed AI Security Incidents
+------------------------------- × 100
+AI Security Alerts Investigated
+```
+
+Example:
+
+* 10,000 alerts investigated
+* 80 confirmed incidents
+
+Result:
+
+**0.8%**
+
+This metric must be interpreted carefully because a low conversion rate can result from either effective filtering or excessive false positives.
+
+---
+
+## 33. AI Security False-Positive Rate
+
+```text
+False Positive Rate =
+Alerts Determined Non-Malicious
+------------------------------- × 100
+Alerts Investigated
+```
+
+This can help evaluate detection quality.
+
+**False-Positive Rate ≠ Overall Detection Effectiveness.**
+
+---
+
+## 34. AI Security False-Negative Measurement
+
+Where ground truth is sufficiently established, organizations may evaluate missed detections.
+
+```text
+False Negative Rate =
+Missed True Conditions
+---------------------- × 100
+All True Conditions
+```
+
+Because ground truth is often incomplete in security environments, this metric may have significant measurement limitations.
+
+---
+
+## 35. AI Security Vulnerability Remediation Rate
+
+```text
+Vulnerability Remediation Rate =
+AI Vulnerabilities Remediated Within Requirement
+------------------------------------------------ × 100
+AI Vulnerabilities Requiring Remediation
+```
+
+The population should be segmented by severity.
+
+---
+
+## 36. Critical AI Vulnerability Exposure
+
+```text
+Critical AI Vulnerability Exposure =
+Open Critical AI Vulnerabilities
+```
+
+This can be presented as a count rather than a percentage.
+
+Example:
+
+**12 open critical AI vulnerabilities**
+
+The number should be interpreted alongside:
+
+* Asset criticality
+* Exposure
+* Exploitability
+* Compensating controls
+* Age
+* Business impact
+
+---
+
+## 37. AI Supplier Security Assessment Coverage
+
+```text
+Supplier Assessment Coverage =
+Critical AI Suppliers with Current Assessment
+--------------------------------------------- × 100
+Applicable Critical AI Suppliers
+```
+
+Example:
+
+* 25 critical suppliers
+* 23 assessed
+
+Result:
+
+**92%**
+
+**Supplier Assessment Coverage ≠ Supplier Security Assurance.**
+
+---
+
+## 38. AI Supplier Concentration
+
+A simple concentration metric can identify the proportion of critical AI capability dependent on a particular supplier.
+
+```text
+Supplier Concentration =
+Critical AI Capability Dependent on Supplier X
+----------------------------------------------- × 100
+Total Critical AI Capability
+```
+
+This can support concentration-risk analysis.
+
+---
+
+## 39. Fourth-Party Visibility
+
+```text
+Fourth-Party Visibility =
+Known Relevant Fourth Parties
+----------------------------- × 100
+Identified Relevant Fourth Parties
+```
+
+The denominator itself may be uncertain where fourth-party dependencies are not fully observable.
+
+**Fourth-Party Visibility ≠ Fourth-Party Assurance.**
+
+---
+
+## 40. AI Control Exception Rate
+
+```text
+Control Exception Rate =
+AI Controls with Active Exceptions
+---------------------------------- × 100
+Applicable AI Controls
+```
+
+Example:
+
+* 1,000 applicable controls
+* 35 active exceptions
+
+Result:
+
+**3.5%**
+
+---
+
+## 41. Critical Control Failure Rate
+
+```text
+Critical Control Failure Rate =
+Critical Controls with Confirmed Failure
+---------------------------------------- × 100
+Critical Controls Tested
+```
+
+The organization should define what constitutes a confirmed control failure.
+
+---
+
+## 42. AI Security Risk Reduction
+
+Measures change in assessed risk exposure following treatment.
+
+```text
+Risk Reduction =
+Pre-Treatment Risk Score
+-
+Post-Treatment Risk Score
+```
+
+For example:
+
+* Pre-treatment residual risk: 80
+* Post-treatment residual risk: 55
+
+Difference:
+
+**25 points**
+
+The scoring methodology must be defined.
+
+**Risk Score Reduction ≠ Elimination of Risk.**
+
+---
+
+## 43. AI Security Risk Recurrence
+
+Measures repeated material risk conditions.
+
+```text
+Risk Recurrence Rate =
+Recurring Material AI Risks
+-------------------------- × 100
+Material AI Risks Identified
+```
+
+This can help identify persistent governance problems.
+
+---
+
+## 44. AI Security Dashboard Data Freshness
+
+```text
+Data Freshness =
+Current Timestamp - Source Data Timestamp
+```
+
+Example:
+
+* Current time: 12:00
+* Source data timestamp: 11:15
+
+Result:
+
+**45 minutes old**
+
+Whether 45 minutes is acceptable depends on the dashboard's purpose.
+
+---
+
+## 45. AI Security Dashboard Reporting Latency
+
+```text
+Reporting Latency =
+Dashboard Availability Timestamp
+-
+Relevant Source Event Timestamp
+```
+
+This can measure how quickly material information reaches governance reporting.
+
+---
+
+## 46. Board-Level Material AI Risk Coverage
+
+```text
+Board Material Risk Coverage =
+Material AI Risks Represented in Board Reporting
+------------------------------------------------ × 100
+Material AI Risks Requiring Board Visibility
+```
+
+This metric evaluates whether material risks are being represented at the appropriate governance level.
+
+**Board Reporting Coverage ≠ Complete AI Risk Visibility.**
+
+---
+
+## 47. Board-Level Assurance Coverage
+
+```text
+Board Assurance Coverage =
+Material Board Dashboard Elements with Defined Assurance
+--------------------------------------------------------- × 100
+Material Board Dashboard Elements
+```
+
+This helps identify where dashboard information lacks an appropriate assurance mechanism.
+
+---
+
+## 48. Board-Level Dashboard Data Quality
+
+A board dashboard can track the proportion of material information meeting defined data-quality requirements.
+
+```text
+Board Data Quality Rate =
+Material Dashboard Data Meeting Quality Criteria
+------------------------------------------------ × 100
+Material Dashboard Data Evaluated
+```
+
+---
+
+## 49. Board-Level Material Exception Rate
+
+```text
+Material Exception Rate =
+Open Material AI Security Exceptions
+------------------------------------- × 100
+Applicable Material AI Security Conditions
+```
+
+The denominator should be carefully defined because exceptions may arise from different governance populations.
+
+---
+
+## 50. Board-Level AI Security Assurance Gap
+
+A qualitative or quantitative indicator can identify material dashboard elements lacking sufficient assurance.
+
+```text
+Assurance Gap Rate =
+Material Dashboard Elements Without Sufficient Assurance
+---------------------------------------------------------- × 100
+Material Dashboard Elements
+```
+
+This should not be interpreted as a measure of overall AI security risk.
+
+---
+
+# Practical Metric Classification
+
+The examples can also be organized according to what they actually measure.
+
+| Metric Type | Example |
+|---|---|
+| **Coverage** | AI Monitoring Coverage |
+| **Activity** | AI Security Assessments Completed |
+| **Outcome** | Reduction in Residual Risk |
+| **Effectiveness** | Control Effectiveness Rate |
+| **Risk** | Critical AI Exposure |
+| **Incident** | Critical AI Incident Rate |
+| **Response** | Mean Time to Respond |
+| **Recovery** | Mean Time to Recover |
+| **Compliance-related** | AI Policy Compliance Rate |
+| **Model Performance** | Model Accuracy |
+| **Model Drift** | Material Model Drift Rate |
+| **Reliability** | Hallucination Rate |
+| **Fairness** | Group Outcome Rate |
+| **Data Quality** | Evidence/Data Quality Rate |
+| **Supplier** | Supplier Assessment Coverage |
+| **Resilience** | Recovery Capability Coverage |
+| **Assurance** | Assurance Coverage |
+| **Board Reporting** | Material AI Risk Coverage |
+
+---
+
+# Recommended Metric Record
+
+Every production metric in an enterprise AI security measurement program should ideally have a controlled definition similar to the following:
+
+```text id="metric-record"
+Metric Name:
+AI Security Monitoring Coverage
+
+Metric ID:
+AI-SM-AISEC-001
+
+Purpose:
+Measure coverage of required AI security monitoring.
+
+Metric Type:
+Coverage Metric
+
+Owner:
+AI Security
+
+Data Owner:
+Security Monitoring Platform
+
+Population:
+Applicable Production AI Systems
+
+Numerator:
+Production AI Systems with Required Security Monitoring
+
+Denominator:
+Applicable Production AI Systems
+
+Formula:
+(Numerator / Denominator) × 100
+
+Frequency:
+Monthly
+
+Target:
+Organization-defined
+
+Threshold:
+Organization-defined
+
+Data Source:
+AI Inventory + Monitoring Platform
+
+Evidence:
+Monitoring configuration and inventory records
+
+Limitations:
+Inventory completeness and monitoring classification may affect
+the accuracy of the metric.
+
+Assurance:
+Periodic validation against authoritative source systems.
+```
+
+---
+
+# Metric Design Rule
+
+A practical AI security metric should answer at least six questions:
+
+```text id="metric-design-questions"
+WHAT?
+  |
+  v
+WHAT IS BEING MEASURED?
+  |
+  v
+WHY?
+  |
+  v
+WHY DOES IT MATTER?
+  |
+  v
+HOW?
+  |
+  v
+HOW IS IT CALCULATED?
+  |
+  v
+SOURCE?
+  |
+  v
+WHERE DOES THE DATA COME FROM?
+  |
+  v
+ACTION?
+  |
+  v
+WHAT HAPPENS IF IT CHANGES?
+```
+
+A metric without a defined purpose, population, methodology, owner, source, interpretation, and decision use is less useful as a governance instrument.
+
+---
+
+# Final Principle
+
+Practical metrics should not be selected merely because they are easy to calculate.
+
+The objective is to establish a measurement system that connects:
+
+**AI Objective → Risk → Control → Metric → Evidence → Analysis → Decision → Action → Assurance**
+
+The strongest AI security measurement programs therefore combine **coverage metrics, activity metrics, outcome metrics, effectiveness metrics, risk indicators, incident metrics, model metrics, compliance-related metrics, supplier metrics, resilience metrics, and assurance metrics**, while preserving the distinction between what a metric demonstrates and what it does not demonstrate.
+
+**Metric ≠ Risk.**
+
+**Metric ≠ Control.**
+
+**Metric ≠ Compliance.**
+
+**Metric ≠ Assurance.**
+
+**Metric ≠ Security Effectiveness Automatically.**
+
+**More Metrics ≠ Better Governance Automatically.**
