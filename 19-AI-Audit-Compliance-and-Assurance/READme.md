@@ -1,5 +1,3 @@
-Absolutely. For Chapter 19, the README should function as the chapter-level navigation and scope document, covering all 20 lessons and making the progression from audit foundations through assurance architecture clear.
-
 # Chapter 19 — AI Audit, Compliance and Assurance
 
 ## Chapter Overview
